@@ -1,0 +1,19 @@
+header {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    font-size: 80px;
+}
+
+.search {
+    background-color: white;
+    
+}
+
+.city {
+    background-color: white;
+}
+
+.forecast {
+    background-color: white;
+}
