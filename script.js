@@ -1,5 +1,6 @@
 var searchBtn = document.querySelector("#searchBtn")
 var weatherDashboard = document.getElementById("weather-details")
+var forecast = document.getElementById("weather-forecast")
 
 searchBtn.addEventListener('click', searchCity)
 
@@ -49,7 +50,7 @@ function fetchWeather(lat, lon, cityName) {
         renderForecast(data);
     })
     .catch(function(error){
-        console.error("Error featching data", error)
+        console.error("Error fetching data", error)
     })
 }
 
