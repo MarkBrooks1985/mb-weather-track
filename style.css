@@ -5,10 +5,21 @@ header {
     font-size: 80px;
 }
 
+h1
+
 .search {
     background-color: white;
     
 }
+
+.btn {
+    text-decoration: none;
+    border: none;
+    background-color: cadetblue;
+    color: whitesmoke;
+}
+
+.history
 
 .city {
     background-color: white;
@@ -16,6 +27,16 @@ header {
 
 .forecast {
     background-color: white;
+    text-align: center;
+    display: flex;
+    position: relative;
+    left: 400px;
+}
+
+.border-style {
+    border: solid black 5px;
+    margin: 5px;
+    padding: 10px;
 }
 
 /* propety for search 

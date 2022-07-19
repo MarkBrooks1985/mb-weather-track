@@ -11,8 +11,13 @@
         Weather Dashboard
     </header>
     <div class="search">
+        <h1>Search for a City</h1>
         <input name="search" id="search-input" />
-        <button id="searchBtn" type="button">Search</button>
+        <button class="btn" id="searchBtn" placeholder="Type in a city name" type="button">Search</button>
+    </div>
+
+    <div class="history" id="search-history">
+        Search History
     </div>
 
     <div class="city" id="weather-details">
@@ -20,7 +25,7 @@
     </div>
     
     <div class="forecast" id="weather-forecast">
-        Forecast
+        
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="script.js"></script>

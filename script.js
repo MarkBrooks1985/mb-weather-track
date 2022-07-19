@@ -57,56 +57,70 @@ function fetchWeather(lat, lon, cityName) {
 function renderResult(result, cityName){
     // show date next to city name
     // create element > add text > add the element to weatherDashboard
+    weatherDashboard.innerHTML = "";
+    
+    var divEl = document.createElement('div')
     var h2El = document.createElement('h2')
     var iconEl = document.createElement("img")
     iconEl.src = "http://openweathermap.org/img/wn/"+ result.current.weather[0].icon +".png"
     h2El.textContent = cityName + " " + moment.unix(result.current.dt).format("DD/MM/YYYY")
     h2El.appendChild(iconEl);
-    weatherDashboard.appendChild(h2El);
+    divEl.appendChild(h2El);
 
     // icon
     // extracted from result temp, wind, humidity, uv index
     var tempEl = document.createElement('p')
     tempEl.textContent = "Temp: " + result.current.temp
-    weatherDashboard.appendChild(tempEl);
+    divEl.appendChild(tempEl);
 
     var windEl = document.createElement('p')
     windEl.textContent = "Wind: " + result.current.wind_speed
-    weatherDashboard.appendChild(windEl);
+    divEl.appendChild(windEl);
 
     var humidEl = document.createElement('p')
     humidEl.textContent = "Humidity: " + result.current.humidity
-    weatherDashboard.appendChild(humidEl);
+    divEl.appendChild(humidEl);
 
     var uviEl = document.createElement('p')
     uviEl.textContent = "UV Index: " + result.current.uvi
-    weatherDashboard.appendChild(uviEl);
+    divEl.appendChild(uviEl);
+
+    divEl.setAttribute('class', 'border-style');
+
+    weatherDashboard.appendChild(divEl);
 }
 
 function renderForecast(result) {
  // result.daily - array - use loop starting 0 till <5
+ forecast.innerHTML = "";
+ console.log(result)
  for (let index = 0; index < 5; index++) {
     // create 
     // add text value
     // 
+    var divEl = document.createElement('div')
     var h2El = document.createElement('h2')
     var iconEl = document.createElement("img")
-    iconEl.src = "http://openweathermap.org/img/wn/"+ result.daily.weather[0].icon +".png"
-    h2El.textContent = moment.unix(result.daily.dt).format("DD/MM/YYYY")
+    iconEl.src = "http://openweathermap.org/img/wn/"+ result.daily[index].weather[0].icon +".png"
+    h2El.textContent = moment.unix(result.daily[index].dt).format("DD/MM/YYYY")
     h2El.appendChild(iconEl);
-    forecast.appendChild(h2El);
+    divEl.appendChild(h2El);
 
     var tempEl = document.createElement('p')
-    tempEl.textContent = "Temp: " + result.daily.temp
-    forecast.appendChild(tempEl);
+    tempEl.textContent = "Temp: " + result.daily[index].temp.day
+    divEl.appendChild(tempEl);
 
     var windEl = document.createElement('p')
     windEl.textContent = "Wind: " + result.current.wind_speed
-    forecast.appendChild(windEl);
+    divEl.appendChild(windEl);
 
     var humidEl = document.createElement('p')
     humidEl.textContent = "Humidity: " + result.current.humidity
-    forecast.appendChild(humidEl);
+    divEl.appendChild(humidEl);
+
+    divEl.setAttribute('class', 'border-style');
+
+    forecast.appendChild(divEl);
     // append to forecast
  };
 };
