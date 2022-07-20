@@ -3,21 +3,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Weather Tracker</title>
 </head>
 <body>
     <header>
         Weather Dashboard
     </header>
+    
     <div class="search">
-        <h1>Search for a City</h1>
+        Search for a City:
         <input name="search" id="search-input" />
         <button class="btn" id="searchBtn" placeholder="Type in a city name" type="button">Search</button>
     </div>
 
+    <div class="text-history">Search History:</div>
+
     <div class="history" id="search-history">
-        Search History
+        
     </div>
 
     <div class="city" id="weather-details">
@@ -28,6 +31,6 @@
         
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

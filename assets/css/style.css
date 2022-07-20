@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Voltaire&display=swap');
+
+:root {
+    --bg-color: slategrey;
+    --bg-color2: white;
+    --font-color: whitesmoke;
+    --btn-color: cadetblue;
+    --border: black;
+
+
+}
+
+body {
+    font-family: 'Voltaire';
+}
+
+header {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    text-align: center;
+    font-size: 80px;
+    border-bottom: 5px solid var(--border);
+    font-weight: bold;
+}
+
+.search {
+    background-color: var(--bg-color2);
+    color: var(--border);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+button {
+    text-decoration: none;
+    border: 2px solid var(--border);
+    background-color: var(--btn-color);
+    color: var(--font-color);
+    margin-right: 4px;
+}
+
+.btn {
+    display: table-cell;
+}
+
+.text-History {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    border-bottom: 5px solid var(--border);
+}
+
+.history {
+    margin-top: 5px;
+    width: 20%;
+    text-align: center;
+    font-weight: bold;
+    background-color: white;
+}
+
+.city {
+    background-color: var(--bg-color2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+}
+
+.forecast {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.border-style {
+    border: 2px solid var(--border);
+    width: 15%;
+    margin-right: 5px;
+}
